@@ -8,17 +8,17 @@ namespace StackLesson
 {
     public class Stack
     {
-        
+        public int numbers { get; set; }
         public void Push(object obj)
         {
-            var numbers = (int) obj;
+            numbers = (int)obj;
         }
 
         public object Pop()
         {
             var stack = new Stack();
 
-            return 
+            return numbers;
 
         }
 
