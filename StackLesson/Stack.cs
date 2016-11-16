@@ -8,13 +8,22 @@ namespace StackLesson
 {
     public class Stack
     {
+        public List<int> numbers { get; set; }
+
+        public Stack()
+        {
+            numbers = new List<int>();
+
+        }
+
         public void Push(object obj)
         {
-            
+            numbers.Add((int) obj);
         }
 
         public object Pop()
         {
+            return numbers;
 
         }
 
