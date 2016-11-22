@@ -6,25 +6,38 @@ using System.Threading.Tasks;
 
 namespace StackLesson
 {
+
     public class Stack
     {
-        public int numbers { get; set; }
+        List<object> input = new List<object>();
+        private string _error = "Something went wrong";
+        private int _count;
+
         public void Push(object obj)
         {
-            numbers = (int)obj;
+            
+            if (input != null){
+                input.Add(obj);
+
+                _count = input.Count - 1;
+               
+            }
+            else
+            {
+                throw new InvalidOperationException(_error);         
+            }
         }
 
         public object Pop()
         {
-            var stack = new Stack();
-
-            return numbers;
-
+            input.RemoveAt(_count);
+            return input;
+           
         }
 
         void Clear()
         {
-
+            
         }
     }
 }
