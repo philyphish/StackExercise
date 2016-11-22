@@ -30,9 +30,19 @@ namespace StackLesson
 
         public object Pop()
         {
-            input.RemoveAt(_count);
-            return input;
-           
+            
+
+            if (input.Count > 0){
+                input.RemoveAt(_count);
+                var holder = input[_count];
+
+                return holder;
+
+            }
+
+
+
+
         }
 
         void Clear()
